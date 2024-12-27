@@ -1,6 +1,7 @@
 import axios from "axios";
 
-const API_URL = "http://localhost:8080/api-mystore/order";
+const backendServerUrl = import.meta.env.VITE_BACKEND_SERVER_URL;
+const API_URL = `${backendServerUrl}/api-mystore/order`;
 
 class OrderService {
   getWaitingOrderList() {

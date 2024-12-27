@@ -1,9 +1,7 @@
 import axios from "axios";
 
-const CLOUDINARY_CLOUD_NAME = import.meta.env.VITE_CLOUDINARY_CLOUD_NAME;
-const CLOUDINARY_PRESET = import.meta.env.VITE_CLOUDINARY_PRESET;
-
-const API_URL = `https://api.cloudinary.com/v1_1/${CLOUDINARY_CLOUD_NAME}/image/upload`;
+const backendServerUrl = import.meta.env.VITE_BACKEND_SERVER_URL;
+const API_URL = `${backendServerUrl}/api-mystore/upload`;
 
 class UploadImgService {
   uploadImg(file, fileName) {
