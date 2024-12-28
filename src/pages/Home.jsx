@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-import { Logobg } from "../assets";
+import { logo15ms } from "../assets";
 // icons
 import { RiSearchLine } from "react-icons/ri";
 import { FaShoppingCart, FaHeart, FaUserCircle } from "react-icons/fa";
@@ -18,8 +18,8 @@ import { heroFood } from "../assets";
 
 const buttonIconsInfo = [
   // { icon: <RiCompassDiscoverLine />, link: "/discover" },
-  { icon: <p>消費者平台</p>, link: "/" },
-  { icon: <p>企業平台</p>, link: "/mystore-register" },
+  { icon: <p>消費者平台</p>, link: "https://food-savior.onrender.com" },
+  { icon: <p>企業平台</p>, link: "/mystore-login" },
   // { icon: <FaHeart />, link: "/favorite" },
   // { icon: <FaUserCircle />, link: "/profile" },
 ];
@@ -49,7 +49,7 @@ const Home = () => {
         {/* top */}
         <div className="flex flex-row items-center justify-between px-10 max-lg:px-8 border-b">
           <Link to="/" className="text-4xl py-4">
-            <img src={Logobg} alt="logo" className="w-16 h-16" />
+            <img src={logo15ms} alt="logo" className="w-16 h-16" />
           </Link>
 
           <div className="flex flex-row items-center gap-4">
