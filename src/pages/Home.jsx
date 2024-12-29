@@ -90,7 +90,7 @@ const Home = () => {
 
               <div className="flex flex-row gap-4 mt-6">
                 <Link
-                  to="/login"
+                  to="https://food-savior.onrender.com"
                   className="border-2 border-white rounded-md px-4 py-2"
                 >
                   <p>消費者平台</p>
