@@ -87,11 +87,12 @@ const Step2 = ({ setAllowNextStep }) => {
   // zustand
   const { formData, setFormData } = useRegFormStore();
   // useState
+  // default value for address input
   const [addressInputValue, setAddressInputValue] = useState({
-    postalCode: undefined,
-    city: "",
-    town: "",
-    street: "",
+    postalCode: 110,
+    city: "台北市",
+    town: "信義區",
+    street: "信義路五段7號",
     floor: "",
   });
   const [viewState, setViewState] = useState({
@@ -174,26 +175,28 @@ const Step2 = ({ setAllowNextStep }) => {
             label="郵遞區號"
             type="number"
             required
-            defaultValue={formData.postalCode}
+            defaultValue={addressInputValue.postalCode}
           />
           <TextField
             {...customTextFieldMiddle}
             id="city"
             label="縣市"
             required
-            defaultValue={formData.city}
+            defaultValue={addressInputValue.city}
           />
           <TextField
             {...customTextFieldMiddle}
             id="town"
             label="鄉鎮市區"
             required
+            defaultValue={addressInputValue.town}
           />
           <TextField
             {...customTextFieldMiddle}
             id="street"
             label="街道、巷弄、路段、號碼"
             required
+            defaultValue={addressInputValue.street}
           />
           <TextField {...customTextFieldBottom} id="floor" label="樓層" />
         </form>
